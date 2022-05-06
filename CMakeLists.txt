@@ -13,6 +13,7 @@ SET ( ly_tst_dir	${ly_base_dir}/unit_test )
 SET ( ly_lib_name	yuv )
 SET ( ly_lib_static	${ly_lib_name} )
 SET ( ly_lib_shared	${ly_lib_name}_shared )
+add_definitions(-DLIBYUV_DISABLE_NEON)
 
 FILE ( GLOB_RECURSE	ly_source_files ${ly_src_dir}/*.cc )
 LIST ( SORT			ly_source_files )
